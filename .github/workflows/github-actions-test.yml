@@ -18,7 +18,7 @@ jobs:
         python-version: 3.9
 
     - name: Instalar dependências
-      run: pip install pytest
+      run: pip install unittest
       
     - name: Executar testes
-      run: pytest
+      run: unittest
