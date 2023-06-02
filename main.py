@@ -1,11 +1,16 @@
-def calcular_media(numeros):
-    if len(numeros) == 0:
-        return 0
-    soma = sum(numeros)
-    media = soma / len(numeros)
-    return media
+class MemoryCalculator:
+  
+  def __init__(self, save_last_sum=False):
+    self._sum = 0
+    self._save_last_sum = save_last_sum
+    self.last_sum = None
 
-# Exemplo de uso
-lista_numeros = [1, 2, 3, 4, 5]
-media = calcular_media(lista_numeros)
-print("A média é:", media)
+  def add(self, number):
+    self._sum += number
+
+  def sum(self):
+    if self._save_last_sum:
+      self.last_sum = self._sum
+    temp = self._sum
+    self._sum = 0
+    return temp
