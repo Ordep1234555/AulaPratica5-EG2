@@ -1,5 +1,5 @@
 import unittest
-from calculator import MemoryCalculator
+from main import MemoryCalculator
 
 class TestMemoryCalculator(unittest.TestCase):
 
