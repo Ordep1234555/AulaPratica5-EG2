@@ -1,4 +1,5 @@
 import pytest
+from main import calcular_media
 
 def test_lista_vazia():
     numeros = []
